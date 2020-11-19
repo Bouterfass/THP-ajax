@@ -8,7 +8,7 @@
 
 require 'faker'
 
-
+=begin 
 Task.destroy_all
 Category.destroy_all
 
@@ -20,4 +20,13 @@ Category.destroy_all
     my_task.category = my_category
     my_task.save
   end
+end
+=end
+
+
+Email.destroy_all
+
+
+5.times do 
+  email = Email.create(object: Faker::Book.title, body: Faker::Lorem.paragraph_by_chars)
 end
