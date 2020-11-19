@@ -33977,3 +33977,872 @@ Processing by EmailsController#update as JS
 Completed 200 OK in 20ms (Views: 0.6ms | ActiveRecord: 11.5ms | Allocations: 3397)
 
 
+Started GET "/emails" for ::1 at 2020-11-19 14:26:16 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/_email.html.erb:6
+  Rendered emails/_email.html.erb (Duration: 18.6ms | Allocations: 4674)
+  Rendered layouts/_email.html.erb (Duration: 2.0ms | Allocations: 255)
+  Rendered emails/index.html.erb within layouts/application (Duration: 24.1ms | Allocations: 5556)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 36.3ms | ActiveRecord: 5.4ms | Allocations: 13030)
+
+
+Started GET "/emails" for ::1 at 2020-11-19 14:26:18 +0100
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (1.3ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/_email.html.erb:6
+  Rendered emails/_email.html.erb (Duration: 3.9ms | Allocations: 816)
+  Rendered layouts/_email.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered emails/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1031)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 1.3ms | Allocations: 4412)
+
+
+Started GET "/emails/13" for ::1 at 2020-11-19 14:26:19 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"13"}
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[36mEmail Update (1.0ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 13:26:19.539346"], ["id", 13]]
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[35m (35.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 2.8ms | Allocations: 445)
+  Rendered emails/show.js.erb (Duration: 6.4ms | Allocations: 843)
+Completed 200 OK in 72ms (Views: 12.3ms | ActiveRecord: 38.9ms | Allocations: 5810)
+
+
+Started POST "/emails" for ::1 at 2020-11-19 14:26:20 +0100
+Processing by EmailsController#create as JS
+  Parameters: {"commit"=>"Recevoir un email"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[36mEmail Create (0.8ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "Antic Hay"], ["body", "Error velit animi. Eveniet explicabo rerum. Et voluptatum quo. Rem fugit minima. Est quia ut. Quis ut quas. Consequatur aut quidem. Nostrum asperiores dolor. Ducimus enim voluptatem. Et eius facilis. Consequatur libero quibusdam. Quaerat in vel. Ut tempor."], ["created_at", "2020-11-19 13:26:20.773147"], ["updated_at", "2020-11-19 13:26:20.773147"]]
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[35m (342.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  Rendering emails/create.js.erb
+  Rendered emails/create.js.erb (Duration: 2.5ms | Allocations: 158)
+Completed 200 OK in 435ms (Views: 4.0ms | ActiveRecord: 343.3ms | Allocations: 85458)
+
+
+Started GET "/emails/18" for ::1 at 2020-11-19 14:26:21 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"18"}
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[36mEmail Update (1.4ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 13:26:21.889363"], ["id", 18]]
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[35m (201.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 0.3ms | Allocations: 134)
+  Rendered emails/show.js.erb (Duration: 0.6ms | Allocations: 259)
+Completed 200 OK in 211ms (Views: 1.1ms | ActiveRecord: 203.1ms | Allocations: 3650)
+
+
+Started PUT "/emails/18" for ::1 at 2020-11-19 14:26:22 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"18"}
+  [1m[36mEmail Load (2.7ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:53:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[36mEmail Update (6.0ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-11-19 13:26:22.854719"], ["id", 18]]
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[35m (47.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (Duration: 0.6ms | Allocations: 156)
+Completed 200 OK in 82ms (Views: 1.6ms | ActiveRecord: 56.4ms | Allocations: 3699)
+
+
+Started GET "/emails/16" for ::1 at 2020-11-19 14:26:24 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"16"}
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 13:26:24.052341"], ["id", 16]]
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[35m (49.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 0.5ms | Allocations: 138)
+  Rendered emails/show.js.erb (Duration: 1.0ms | Allocations: 262)
+Completed 200 OK in 60ms (Views: 2.5ms | ActiveRecord: 50.3ms | Allocations: 3626)
+
+
+Started PUT "/emails/16" for ::1 at 2020-11-19 14:26:25 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"16"}
+  [1m[36mEmail Load (4.0ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:53:in `update'
+  [1m[35m (4.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[36mEmail Update (0.7ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-11-19 13:26:25.214349"], ["id", 16]]
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[35m (61.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (Duration: 0.1ms | Allocations: 9)
+Completed 200 OK in 94ms (Views: 0.6ms | ActiveRecord: 70.3ms | Allocations: 3397)
+
+
+Started GET "/emails/15" for ::1 at 2020-11-19 14:26:26 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"15"}
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[36mEmail Update (3.9ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 13:26:26.596015"], ["id", 15]]
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[35m (53.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 0.4ms | Allocations: 133)
+  Rendered emails/show.js.erb (Duration: 0.8ms | Allocations: 257)
+Completed 200 OK in 80ms (Views: 1.5ms | ActiveRecord: 58.9ms | Allocations: 3617)
+
+
+Started PUT "/emails/15" for ::1 at 2020-11-19 14:26:27 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"15"}
+  [1m[36mEmail Load (1.1ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:53:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[36mEmail Update (0.8ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-11-19 13:26:27.489832"], ["id", 15]]
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[35m (122.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (Duration: 0.1ms | Allocations: 9)
+Completed 200 OK in 147ms (Views: 0.8ms | ActiveRecord: 124.7ms | Allocations: 3395)
+
+
+Started DELETE "/emails/15" for ::1 at 2020-11-19 14:26:28 +0100
+Processing by EmailsController#destroy as JS
+  Parameters: {"id"=>"15"}
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:37:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[36mEmail Destroy (0.8ms)[0m  [1m[31mDELETE FROM "emails" WHERE "emails"."id" = $1[0m  [["id", 15]]
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[35m (22.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  Rendering emails/destroy.js.erb
+  Rendered emails/destroy.js.erb (Duration: 0.7ms | Allocations: 108)
+Completed 200 OK in 36ms (Views: 1.7ms | ActiveRecord: 23.6ms | Allocations: 3202)
+
+
+Started GET "/emails/16" for ::1 at 2020-11-19 14:26:30 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"16"}
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[36mEmail Update (0.8ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 13:26:30.141033"], ["id", 16]]
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[35m (44.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 0.4ms | Allocations: 138)
+  Rendered emails/show.js.erb (Duration: 0.8ms | Allocations: 262)
+Completed 200 OK in 65ms (Views: 1.3ms | ActiveRecord: 46.0ms | Allocations: 3638)
+
+
+Started DELETE "/emails/16" for ::1 at 2020-11-19 14:26:31 +0100
+Processing by EmailsController#destroy as JS
+  Parameters: {"id"=>"16"}
+  [1m[36mEmail Load (1.3ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:37:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[36mEmail Destroy (0.6ms)[0m  [1m[31mDELETE FROM "emails" WHERE "emails"."id" = $1[0m  [["id", 16]]
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[35m (60.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  Rendering emails/destroy.js.erb
+  Rendered emails/destroy.js.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 88ms (Views: 0.6ms | ActiveRecord: 62.4ms | Allocations: 2937)
+
+
+Started GET "/emails/13" for ::1 at 2020-11-19 14:26:32 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"13"}
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 1.2ms | Allocations: 136)
+  Rendered emails/show.js.erb (Duration: 2.3ms | Allocations: 261)
+Completed 200 OK in 11ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 1313)
+
+
+Started DELETE "/emails/13" for ::1 at 2020-11-19 14:26:33 +0100
+Processing by EmailsController#destroy as JS
+  Parameters: {"id"=>"13"}
+  [1m[36mEmail Load (2.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:37:in `destroy'
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[36mEmail Destroy (0.9ms)[0m  [1m[31mDELETE FROM "emails" WHERE "emails"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[35m (32.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  Rendering emails/destroy.js.erb
+  Rendered emails/destroy.js.erb (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 57ms (Views: 1.6ms | ActiveRecord: 38.2ms | Allocations: 2939)
+
+
+Started GET "/emails/14" for ::1 at 2020-11-19 14:26:34 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"14"}
+  [1m[36mEmail Load (0.7ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 0.4ms | Allocations: 136)
+  Rendered emails/show.js.erb (Duration: 0.8ms | Allocations: 261)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.7ms | Allocations: 1319)
+
+
+Started DELETE "/emails/14" for ::1 at 2020-11-19 14:26:34 +0100
+Processing by EmailsController#destroy as JS
+  Parameters: {"id"=>"14"}
+  [1m[36mEmail Load (2.1ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:37:in `destroy'
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[36mEmail Destroy (0.5ms)[0m  [1m[31mDELETE FROM "emails" WHERE "emails"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[35m (61.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  Rendering emails/destroy.js.erb
+  Rendered emails/destroy.js.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 77ms (Views: 0.8ms | ActiveRecord: 65.4ms | Allocations: 2933)
+
+
+Started GET "/emails/17" for ::1 at 2020-11-19 14:26:35 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"17"}
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 1.2ms | Allocations: 136)
+  Rendered emails/show.js.erb (Duration: 2.2ms | Allocations: 261)
+Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 0.5ms | Allocations: 1327)
+
+
+Started DELETE "/emails/17" for ::1 at 2020-11-19 14:26:36 +0100
+Processing by EmailsController#destroy as JS
+  Parameters: {"id"=>"17"}
+  [1m[36mEmail Load (1.8ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:37:in `destroy'
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[36mEmail Destroy (6.7ms)[0m  [1m[31mDELETE FROM "emails" WHERE "emails"."id" = $1[0m  [["id", 17]]
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[35m (72.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  Rendering emails/destroy.js.erb
+  Rendered emails/destroy.js.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 106ms (Views: 0.8ms | ActiveRecord: 83.6ms | Allocations: 2955)
+
+
+Started GET "/emails/18" for ::1 at 2020-11-19 14:26:37 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"18"}
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[36mEmail Update (3.9ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 13:26:37.509032"], ["id", 18]]
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[35m (13.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 0.6ms | Allocations: 133)
+  Rendered emails/show.js.erb (Duration: 1.1ms | Allocations: 257)
+Completed 200 OK in 65ms (Views: 2.0ms | ActiveRecord: 18.8ms | Allocations: 3620)
+
+
+Started DELETE "/emails/18" for ::1 at 2020-11-19 14:26:38 +0100
+Processing by EmailsController#destroy as JS
+  Parameters: {"id"=>"18"}
+  [1m[36mEmail Load (3.4ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:37:in `destroy'
+  [1m[35m (4.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[36mEmail Destroy (0.9ms)[0m  [1m[31mDELETE FROM "emails" WHERE "emails"."id" = $1[0m  [["id", 18]]
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[35m (38.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  Rendering emails/destroy.js.erb
+  Rendered emails/destroy.js.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 63ms (Views: 1.1ms | ActiveRecord: 46.4ms | Allocations: 2941)
+
+
+Started POST "/emails" for ::1 at 2020-11-19 14:26:40 +0100
+Processing by EmailsController#create as JS
+  Parameters: {"commit"=>"Recevoir un email"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[36mEmail Create (0.9ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "Behold the Man"], ["body", "Iure debitis non. Amet consequuntur aut. Omnis odio rerum. Quibusdam similique itaque. Sint autem incidunt. Consequatur voluptatem expedita. Non quo temporibus. Enim fugiat aut. Qui aut accusantium. Nostrum exercitationem amet. Quia voluptatem adipisci. E."], ["created_at", "2020-11-19 13:26:40.054757"], ["updated_at", "2020-11-19 13:26:40.054757"]]
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[35m (47.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  Rendering emails/create.js.erb
+  Rendered emails/create.js.erb (Duration: 0.2ms | Allocations: 26)
+Completed 200 OK in 57ms (Views: 1.0ms | ActiveRecord: 48.5ms | Allocations: 3791)
+
+
+Started GET "/emails/19" for ::1 at 2020-11-19 14:26:41 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"19"}
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[36mEmail Update (1.5ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 13:26:41.166275"], ["id", 19]]
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[35m (47.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 0.5ms | Allocations: 133)
+  Rendered emails/show.js.erb (Duration: 1.0ms | Allocations: 257)
+Completed 200 OK in 73ms (Views: 2.0ms | ActiveRecord: 50.9ms | Allocations: 3628)
+
+
+Started POST "/emails" for ::1 at 2020-11-19 14:26:42 +0100
+Processing by EmailsController#create as JS
+  Parameters: {"commit"=>"Recevoir un email"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[36mEmail Create (2.1ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "That Good Night"], ["body", "Maiores voluptatum odio. Est ducimus officia. Est nobis eum. Corrupti qui quasi. Rerum voluptas corporis. Blanditiis quos excepturi. Eveniet labore inventore. Soluta a quam. Id perferendis nam. Saepe commodi quia. Quis voluptas adipisci. Voluptatem accusa."], ["created_at", "2020-11-19 13:26:42.916623"], ["updated_at", "2020-11-19 13:26:42.916623"]]
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[35m (116.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  Rendering emails/create.js.erb
+  Rendered emails/create.js.erb (Duration: 0.2ms | Allocations: 26)
+Completed 200 OK in 144ms (Views: 0.7ms | ActiveRecord: 118.4ms | Allocations: 3785)
+
+
+Started GET "/emails/20" for ::1 at 2020-11-19 14:44:14 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"20"}
+  [1m[36mEmail Load (1.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[36mEmail Update (1.5ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 13:44:14.337365"], ["id", 20]]
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[35m (68.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 2.3ms | Allocations: 133)
+  Rendered emails/show.js.erb (Duration: 4.9ms | Allocations: 257)
+Completed 200 OK in 114ms (Views: 7.6ms | ActiveRecord: 73.0ms | Allocations: 3765)
+
+
+Started DELETE "/emails/20" for ::1 at 2020-11-19 14:44:17 +0100
+Processing by EmailsController#destroy as JS
+  Parameters: {"id"=>"20"}
+  [1m[36mEmail Load (1.0ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:37:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[36mEmail Destroy (0.5ms)[0m  [1m[31mDELETE FROM "emails" WHERE "emails"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  Rendering emails/destroy.js.erb
+  Rendered emails/destroy.js.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 33ms (Views: 0.7ms | ActiveRecord: 13.7ms | Allocations: 2929)
+
+
+Started GET "/" for ::1 at 2020-11-19 17:07:44 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/_email.html.erb:6
+  Rendered emails/_email.html.erb (Duration: 11.7ms | Allocations: 4549)
+  Rendered layouts/_email.html.erb (Duration: 0.5ms | Allocations: 255)
+  Rendered emails/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 5431)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 26.0ms | ActiveRecord: 3.9ms | Allocations: 12818)
+
+
+Started POST "/emails" for ::1 at 2020-11-19 17:07:46 +0100
+Processing by EmailsController#create as JS
+  Parameters: {"commit"=>"Recevoir un email"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[36mEmail Create (0.4ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "For Whom the Bell Tolls"], ["body", "Exercitationem suscipit voluptas. Quia ad dolores. Omnis ut in. Dolores odio ducimus. Amet quia aliquid. Quas neque libero. Debitis quia eaque. Qui ullam hic. Non asperiores corporis. Non voluptatibus sed. Et dolor natus. Dolores dolorum aut. Voluptate au."], ["created_at", "2020-11-19 16:07:46.563615"], ["updated_at", "2020-11-19 16:07:46.563615"]]
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  Rendering emails/create.js.erb
+  Rendered emails/create.js.erb (Duration: 1.4ms | Allocations: 161)
+Completed 200 OK in 148ms (Views: 2.7ms | ActiveRecord: 40.5ms | Allocations: 86468)
+
+
+Started POST "/emails" for ::1 at 2020-11-19 17:07:47 +0100
+Processing by EmailsController#create as JS
+  Parameters: {"commit"=>"Recevoir un email"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[36mEmail Create (0.6ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "Bury My Heart at Wounded Knee"], ["body", "Officiis et recusandae. Et saepe quis. Ipsam modi ab. Sed quos asperiores. Rerum nulla aperiam. Dolor aperiam recusandae. Sit deserunt repudiandae. Et omnis accusantium. Rerum facere ducimus. Perspiciatis saepe vel. Praesentium nam cum. Architecto numquam."], ["created_at", "2020-11-19 16:07:47.140404"], ["updated_at", "2020-11-19 16:07:47.140404"]]
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[35m (70.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  Rendering emails/create.js.erb
+  Rendered emails/create.js.erb (Duration: 0.3ms | Allocations: 27)
+Completed 200 OK in 87ms (Views: 1.2ms | ActiveRecord: 71.6ms | Allocations: 3816)
+
+
+Started GET "/emails/22" for ::1 at 2020-11-19 17:07:48 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"22"}
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[36mEmail Update (0.7ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 16:07:48.008749"], ["id", 22]]
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[35m (46.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 1.4ms | Allocations: 445)
+  Rendered emails/show.js.erb (Duration: 11.9ms | Allocations: 838)
+Completed 200 OK in 72ms (Views: 12.5ms | ActiveRecord: 47.7ms | Allocations: 4805)
+
+
+Started PUT "/emails/22" for ::1 at 2020-11-19 17:07:49 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"22"}
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:53:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[36mEmail Update (0.7ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-11-19 16:07:49.121126"], ["id", 22]]
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[35m (37.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (Duration: 0.5ms | Allocations: 156)
+Completed 200 OK in 46ms (Views: 1.0ms | ActiveRecord: 38.9ms | Allocations: 3701)
+
+
+Started PUT "/emails/22" for ::1 at 2020-11-19 17:07:50 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"22"}
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:53:in `update'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:57:in `update'
+  [1m[36mEmail Update (0.3ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 16:07:50.033641"], ["id", 22]]
+  ↳ app/controllers/emails_controller.rb:57:in `update'
+  [1m[35m (69.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:57:in `update'
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (Duration: 0.1ms | Allocations: 9)
+Completed 200 OK in 79ms (Views: 0.7ms | ActiveRecord: 70.1ms | Allocations: 3411)
+
+
+Started POST "/emails" for ::1 at 2020-11-19 17:08:01 +0100
+Processing by EmailsController#create as JS
+  Parameters: {"commit"=>"Recevoir un email"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[36mEmail Create (0.7ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "Dance Dance Dance"], ["body", "Id recusandae nulla. Nesciunt voluptatem nobis. Reiciendis qui ex. Deserunt et vel. Et voluptatum itaque. Eligendi animi est. A itaque rerum. Enim commodi quisquam. Aperiam explicabo ex. Dignissimos reiciendis dolorum. Sint voluptatibus reprehenderit. Lib."], ["created_at", "2020-11-19 16:08:01.757334"], ["updated_at", "2020-11-19 16:08:01.757334"]]
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[35m (30.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  Rendering emails/create.js.erb
+  Rendered emails/create.js.erb (Duration: 0.2ms | Allocations: 30)
+Completed 200 OK in 48ms (Views: 0.9ms | ActiveRecord: 31.5ms | Allocations: 3789)
+
+
+Started POST "/emails" for ::1 at 2020-11-19 17:08:02 +0100
+Processing by EmailsController#create as JS
+  Parameters: {"commit"=>"Recevoir un email"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[36mEmail Create (0.9ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "Terrible Swift Sword"], ["body", "Velit iure aut. Asperiores enim quia. Animi nulla consequuntur. Quam ipsam sit. Fuga sunt nemo. Culpa qui commodi. Dolor modi voluptatem. Ipsa ut illo. Praesentium et iure. Dolores quaerat esse. Tempora amet pariatur. Et architecto aspernatur. Ut dignissi."], ["created_at", "2020-11-19 16:08:02.607091"], ["updated_at", "2020-11-19 16:08:02.607091"]]
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[35m (33.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  Rendering emails/create.js.erb
+  Rendered emails/create.js.erb (Duration: 0.4ms | Allocations: 26)
+Completed 200 OK in 57ms (Views: 1.8ms | ActiveRecord: 34.8ms | Allocations: 4019)
+
+
+Started POST "/emails" for ::1 at 2020-11-19 17:08:03 +0100
+Processing by EmailsController#create as JS
+  Parameters: {"commit"=>"Recevoir un email"}
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[36mEmail Create (0.7ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "The Soldier's Art"], ["body", "Nihil omnis doloribus. Voluptatem possimus consectetur. Quia dolores aperiam. Est tempore aperiam. Et architecto aut. Autem veniam veritatis. Nulla omnis doloribus. Reprehenderit est ullam. Mollitia quis corporis. Totam iusto exercitationem. Fugit ipsam q."], ["created_at", "2020-11-19 16:08:03.054398"], ["updated_at", "2020-11-19 16:08:03.054398"]]
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[35m (41.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  Rendering emails/create.js.erb
+  Rendered emails/create.js.erb (Duration: 0.4ms | Allocations: 26)
+Completed 200 OK in 65ms (Views: 1.9ms | ActiveRecord: 44.9ms | Allocations: 3785)
+
+
+Started GET "/emails/24" for ::1 at 2020-11-19 17:08:04 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"24"}
+  [1m[36mEmail Load (0.7ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[36mEmail Update (0.8ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 16:08:04.243966"], ["id", 24]]
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[35m (266.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 1.2ms | Allocations: 134)
+  Rendered emails/show.js.erb (Duration: 2.6ms | Allocations: 258)
+Completed 200 OK in 291ms (Views: 6.7ms | ActiveRecord: 268.4ms | Allocations: 3641)
+
+
+Started PUT "/emails/24" for ::1 at 2020-11-19 17:08:05 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"24"}
+  [1m[36mEmail Load (2.7ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:53:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[36mEmail Update (0.9ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-11-19 16:08:05.854447"], ["id", 24]]
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[35m (63.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (Duration: 0.5ms | Allocations: 9)
+Completed 200 OK in 101ms (Views: 2.9ms | ActiveRecord: 67.1ms | Allocations: 3396)
+
+
+Started PUT "/emails/24" for ::1 at 2020-11-19 17:08:06 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"24"}
+  [1m[36mEmail Load (1.0ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:53:in `update'
+  [1m[35m (4.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:57:in `update'
+  [1m[36mEmail Update (3.1ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 16:08:06.366637"], ["id", 24]]
+  ↳ app/controllers/emails_controller.rb:57:in `update'
+  [1m[35m (60.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:57:in `update'
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (Duration: 0.1ms | Allocations: 9)
+Completed 200 OK in 84ms (Views: 0.6ms | ActiveRecord: 68.2ms | Allocations: 3404)
+
+
+Started DELETE "/emails/24" for ::1 at 2020-11-19 17:08:09 +0100
+Processing by EmailsController#destroy as JS
+  Parameters: {"id"=>"24"}
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:37:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[36mEmail Destroy (1.2ms)[0m  [1m[31mDELETE FROM "emails" WHERE "emails"."id" = $1[0m  [["id", 24]]
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[35m (12.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  Rendering emails/destroy.js.erb
+  Rendered emails/destroy.js.erb (Duration: 5.7ms | Allocations: 106)
+Completed 200 OK in 31ms (Views: 6.4ms | ActiveRecord: 14.3ms | Allocations: 3197)
+
+
+Started GET "/emails/25" for ::1 at 2020-11-19 17:08:10 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"25"}
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[36mEmail Update (1.1ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 16:08:10.621630"], ["id", 25]]
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 0.9ms | Allocations: 138)
+  Rendered emails/show.js.erb (Duration: 2.1ms | Allocations: 262)
+Completed 200 OK in 35ms (Views: 3.8ms | ActiveRecord: 10.8ms | Allocations: 3634)
+
+
+Started DELETE "/emails/25" for ::1 at 2020-11-19 17:08:59 +0100
+Processing by EmailsController#destroy as JS
+  Parameters: {"id"=>"25"}
+  [1m[36mEmail Load (0.7ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:37:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[36mEmail Destroy (1.4ms)[0m  [1m[31mDELETE FROM "emails" WHERE "emails"."id" = $1[0m  [["id", 25]]
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[35m (18.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  Rendering emails/destroy.js.erb
+  Rendered emails/destroy.js.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 41ms (Views: 1.6ms | ActiveRecord: 21.3ms | Allocations: 2933)
+
+
+Started GET "/emails/23" for ::1 at 2020-11-19 17:09:00 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[36mEmail Update (1.1ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 16:09:00.555449"], ["id", 23]]
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[35m (52.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 1.5ms | Allocations: 133)
+  Rendered emails/show.js.erb (Duration: 3.2ms | Allocations: 257)
+Completed 200 OK in 83ms (Views: 5.9ms | ActiveRecord: 55.2ms | Allocations: 3634)
+
+
+Started DELETE "/emails/23" for ::1 at 2020-11-19 17:09:01 +0100
+Processing by EmailsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mEmail Load (1.3ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:37:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[36mEmail Destroy (0.6ms)[0m  [1m[31mDELETE FROM "emails" WHERE "emails"."id" = $1[0m  [["id", 23]]
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  [1m[35m (12.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:38:in `destroy'
+  Rendering emails/destroy.js.erb
+  Rendered emails/destroy.js.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 27ms (Views: 1.2ms | ActiveRecord: 14.6ms | Allocations: 2951)
+
+
+Started GET "/emails/21" for ::1 at 2020-11-19 17:09:03 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"21"}
+  [1m[36mEmail Load (0.7ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[36mEmail Update (0.9ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 16:09:03.400527"], ["id", 21]]
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[35m (42.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 1.1ms | Allocations: 133)
+  Rendered emails/show.js.erb (Duration: 2.0ms | Allocations: 257)
+Completed 200 OK in 69ms (Views: 3.9ms | ActiveRecord: 45.7ms | Allocations: 3628)
+
+
+Started GET "/emails/21" for ::1 at 2020-11-19 17:09:03 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"21"}
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 1.2ms | Allocations: 136)
+  Rendered emails/show.js.erb (Duration: 2.5ms | Allocations: 261)
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 0.5ms | Allocations: 1315)
+
+
+Started GET "/emails/21" for ::1 at 2020-11-19 17:09:04 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"21"}
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 1.0ms | Allocations: 136)
+  Rendered emails/show.js.erb (Duration: 1.9ms | Allocations: 261)
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1319)
+
+
+Started GET "/emails/21" for ::1 at 2020-11-19 17:09:04 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"21"}
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 0.8ms | Allocations: 136)
+  Rendered emails/show.js.erb (Duration: 1.4ms | Allocations: 261)
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 1313)
+
+
+Started GET "/emails/21" for ::1 at 2020-11-19 17:09:04 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"21"}
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 0.9ms | Allocations: 136)
+  Rendered emails/show.js.erb (Duration: 1.7ms | Allocations: 261)
+Completed 200 OK in 11ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 1319)
+
+
+Started PUT "/emails/21" for ::1 at 2020-11-19 17:09:05 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"21"}
+  [1m[36mEmail Load (2.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:53:in `update'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[36mEmail Update (2.0ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-11-19 16:09:05.531923"], ["id", 21]]
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[35m (59.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (Duration: 0.2ms | Allocations: 9)
+Completed 200 OK in 81ms (Views: 1.7ms | ActiveRecord: 64.9ms | Allocations: 3391)
+
+
+Started PUT "/emails/21" for ::1 at 2020-11-19 17:09:06 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"21"}
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:53:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:57:in `update'
+  [1m[36mEmail Update (1.0ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 16:09:06.050139"], ["id", 21]]
+  ↳ app/controllers/emails_controller.rb:57:in `update'
+  [1m[35m (64.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:57:in `update'
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (Duration: 0.1ms | Allocations: 9)
+Completed 200 OK in 92ms (Views: 1.2ms | ActiveRecord: 66.8ms | Allocations: 3403)
+
+
+Started GET "/emails/21" for ::1 at 2020-11-19 17:15:00 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"21"}
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 0.5ms | Allocations: 136)
+  Rendered emails/show.js.erb (Duration: 1.1ms | Allocations: 261)
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 0.8ms | Allocations: 1447)
+
+
+Started GET "/" for ::1 at 2020-11-19 17:15:01 +0100
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (2.1ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/_email.html.erb:6
+  Rendered emails/_email.html.erb (Duration: 6.1ms | Allocations: 743)
+  Rendered layouts/_email.html.erb (Duration: 0.6ms | Allocations: 93)
+  Rendered emails/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 956)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 20.7ms | ActiveRecord: 2.1ms | Allocations: 4334)
+
+
+Started POST "/emails" for ::1 at 2020-11-19 17:15:02 +0100
+Processing by EmailsController#create as JS
+  Parameters: {"commit"=>"Recevoir un email"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[36mEmail Create (0.9ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "Françoise Sagan"], ["body", "Aut a dolor. Sapiente deleniti recusandae. Suscipit temporibus et. Autem in quia. Aut beatae inventore. Nam sapiente veritatis. Voluptas ab expedita. Ad nemo nihil. Est est impedit. Veniam alias commodi. Corporis hic id. Ipsum delectus aliquid. Et quisqua."], ["created_at", "2020-11-19 16:15:02.589926"], ["updated_at", "2020-11-19 16:15:02.589926"]]
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[35m (16.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  Rendering emails/create.js.erb
+  Rendered emails/create.js.erb (Duration: 0.3ms | Allocations: 26)
+Completed 200 OK in 35ms (Views: 1.4ms | ActiveRecord: 17.4ms | Allocations: 4024)
+
+
+Started POST "/emails" for ::1 at 2020-11-19 17:15:03 +0100
+Processing by EmailsController#create as JS
+  Parameters: {"commit"=>"Recevoir un email"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[36mEmail Create (0.7ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "The Grapes of Wrath"], ["body", "Excepturi omnis similique. Minus minima alias. In cumque ut. Inventore cupiditate et. Sunt consequatur autem. Tempora consectetur provident. Enim nihil illum. Odio sapiente ut. Itaque consequatur enim. Corrupti quisquam sunt. Aut rerum voluptate. Sit temp."], ["created_at", "2020-11-19 16:15:03.226024"], ["updated_at", "2020-11-19 16:15:03.226024"]]
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  [1m[35m (79.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:28:in `create'
+  Rendering emails/create.js.erb
+  Rendered emails/create.js.erb (Duration: 0.4ms | Allocations: 26)
+Completed 200 OK in 100ms (Views: 1.8ms | ActiveRecord: 80.7ms | Allocations: 3783)
+
+
+Started GET "/emails/27" for ::1 at 2020-11-19 17:15:03 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"27"}
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[36mEmail Update (0.5ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 16:15:03.781477"], ["id", 27]]
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 0.3ms | Allocations: 133)
+  Rendered emails/show.js.erb (Duration: 0.6ms | Allocations: 257)
+Completed 200 OK in 16ms (Views: 1.0ms | ActiveRecord: 7.2ms | Allocations: 3628)
+
+
+Started PUT "/emails/27" for ::1 at 2020-11-19 17:15:05 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"27"}
+  [1m[36mEmail Load (1.1ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:53:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[36mEmail Update (2.1ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-11-19 16:15:05.163923"], ["id", 27]]
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (Duration: 0.2ms | Allocations: 9)
+Completed 200 OK in 38ms (Views: 1.7ms | ActiveRecord: 11.3ms | Allocations: 3398)
+
+
+Started GET "/emails/26" for ::1 at 2020-11-19 17:15:05 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"26"}
+  [1m[36mEmail Load (1.3ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:11:in `show'
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[36mEmail Update (1.1ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-11-19 16:15:05.839144"], ["id", 26]]
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:13:in `show'
+  Rendering emails/show.js.erb
+  Rendered emails/_body.html.erb (Duration: 0.5ms | Allocations: 133)
+  Rendered emails/show.js.erb (Duration: 1.0ms | Allocations: 257)
+Completed 200 OK in 42ms (Views: 1.8ms | ActiveRecord: 20.8ms | Allocations: 3616)
+
+
+Started PUT "/emails/26" for ::1 at 2020-11-19 17:15:07 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"26"}
+  [1m[36mEmail Load (2.3ms)[0m  [1m[34mSELECT "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:53:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-11-19 16:15:07.022640"], ["id", 26]]
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:55:in `update'
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (Duration: 0.1ms | Allocations: 9)
+Completed 200 OK in 26ms (Views: 1.1ms | ActiveRecord: 9.3ms | Allocations: 3397)
+
+
